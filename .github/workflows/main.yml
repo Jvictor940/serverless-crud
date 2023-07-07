@@ -31,10 +31,10 @@ jobs:
         node-version: 18.x
 
     - name: Install dependencies
-      run: yarn install
+      run: npm install
 
     - name: serverless deploy
-      uses: serverless/github-action@master
+      uses: Jvictor940/serverless-crud/actions@main
       with:
         args: deploy
       env:
