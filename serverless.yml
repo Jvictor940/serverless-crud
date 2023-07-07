@@ -81,10 +81,10 @@ resources:
         TableName: ${self:custom.postsTableName}
         AttributeDefinitions:
           - AttributeName: postId
-            AttributType: S
-          KeySchema:
-            - AttributeName: postId
+            AttributeType: N
+        KeySchema:
+          - AttributeName: postId
             KeyType: HASH
-          ProvisionedThroughput:
+        ProvisionedThroughput:
             ReadCapacityUnits: 1
             WriteCapacityUnits: 1
